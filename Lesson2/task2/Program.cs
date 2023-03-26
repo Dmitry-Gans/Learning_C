@@ -2,17 +2,29 @@
 ● 456 -> 46
 ● 782 -> 72
 ● 918 -> 98*/
+//Первый способ через string:
 
-/*Random num = new Random();
-int Formed = num.Next(100, 1000);
+/*Random rundom = new Random();
+int rundomValue = rundom.Next(100, 1000);
 
-int first = Formed / 100;
-int last = Formed % 10;
+int first = rundomValue / 100;
+int last = rundomValue % 10;
 
 string result = $"{first}{last}";
-Console.WriteLine(Formed);
-Console.WriteLine(result);*/
+Console.WriteLine(rundomValue);
+Console.WriteLine("Стираем второе число");
+Console.WriteLine(result);
+*/
 
+//Второй способ, просто через числа:
+
+Random rundom = new Random();
+int rundomValue = rundom.Next(100, 1000);
+
+int first = rundomValue / 100;
+int last = rundomValue % 10;
+
+Console.WriteLine($"{rundomValue}->{first}{last}");
 /*Задача No12. Работа в группах
 Напишите программу, которая будет принимать на вход два числа и выводить, является ли второе число кратным первому. Если число 2 не кратно числу 1, то программа выводит остаток от деления.
 ● 34, 5 -> не кратно, остаток 4

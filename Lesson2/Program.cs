@@ -31,9 +31,11 @@ int Calculate(int a, int b)
 }
 Console.WriteLine(result);*/
 
-//Задача с выявлением максимального числа:
+/*Напишите программу, которая выводит случайное число из отрезка [10, 99]
+и покажите наибольшую цифру числа:
+*/
 
-/*Random random = new Random();
+Random random = new Random();
 int randomValue = random.Next(10,100);
 
 int lastDigit = randomValue % 10;

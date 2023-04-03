@@ -6,37 +6,37 @@
 */
 //Решение без метода
 /*
-Console.WriteLine("Введите A");
-int xa = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите A");
-int ya = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите B");
-int xb = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите B");
-int yb = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите x1");
+int x1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите y1");
+int y1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите x2");
+int x2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите y2");
+int y2 = int.Parse(Console.ReadLine());
 
-double resultPowX = Math.Pow(xb - xa, 2);
-double resultPowY = Math.Pow(yb - ya, 2);
+double resultPowX = Math.Pow(x2 - x1, 2);
+double resultPowY = Math.Pow(y2 - y1, 2);
 
 double result = Math.Sqrt(resultPowX + resultPowY);
 Console.WriteLine(result);
 */
 //Решение с методом
 
-Console.WriteLine("Введите ax");
-double ax = double.Parse(Console.ReadLine());
-Console.WriteLine("Введите ay");
-double ay = double.Parse(Console.ReadLine());
-Console.WriteLine("Введите bx");
-double bx = double.Parse(Console.ReadLine());
-Console.WriteLine("Введите by");
-double by = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите x1");
+int x1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите y1");
+int y1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите x2");
+int x2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите y2");
+int y2 = int.Parse(Console.ReadLine());
 
-double distance = GetDistance(ax, ay, bx, by);
+double distance = GetDistance(x1, y1, x2, y2);//Переводим int в double, чтобы вычисления были точными
 
 Console.WriteLine($"расстояние между точками {distance}");
 
-double GetDistance (double ax, double ay, double bx, double by)
+double GetDistance (double x1, double y1, double x2, double y2)
 {
-    return Math.Sqrt(Math.Pow((bx - ax),2) + Math.Pow((by - ay),2));
+    return Math.Sqrt(Math.Pow((x2 - x1),2) + Math.Pow((y2 - y1),2));
 }

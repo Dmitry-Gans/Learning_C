@@ -26,3 +26,5 @@ void Metod(int a)
         Console.WriteLine(i * i);
     }
 }
+ 
+ 

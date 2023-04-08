@@ -9,19 +9,19 @@
 */
 
 int[] array = new int[5];
-FillArray(array, 0 , 100);
+FillArray(array, 0 , 100);//Сами задаем диапазон создания чисел
 PrintArray(array);
-int result = ValuesInDiapazon(array, 10, 99);
+int result = ValuesInDiapazon(array, 10, 99);//Сами задаем нужный диапазон поиска
 Console.WriteLine(result);
 
 int ValuesInDiapazon(int[] array, int min, int max)
 {
-    int count = 0;
+    int count = 0;//Число верных условий
     for (int i = 0; i < array.Length; i++)
     {
         if(array[i] >= min && array[i] <= max)
         {
-            count ++;
+            count ++;//count = count + 1
         }
     }
     return count;

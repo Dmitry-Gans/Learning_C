@@ -19,7 +19,7 @@ void FillArray(int[] array)
 
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = random.Next(0, 11);
+        array[i] = random.Next(-10, 11);
     }
 }
 void ChangeSignOfNumbers(int[] array)//Cоздаем метод для замены минуса/плюса

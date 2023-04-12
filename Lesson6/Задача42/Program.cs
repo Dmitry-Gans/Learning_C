@@ -4,41 +4,22 @@
 // 3 -> 11
 // 2 -> 10
 
-//первый способ
-/*
-int num = 45;
-
-int remains = 0;//Остаток от % деления на 2
-
-int i = 0;//Шаг
-
-string str = "";//Строка которая копит в себе двоичные числа
-
-while (num >= 1)
-{
-    remains = num % 2;
-    str += remains.ToString();
-    i++;
-    num = num / 2;
-}
-Console.WriteLine(str);
-*/
-//Второй способ
-
 Console.WriteLine("Введите число");
 int num = int.Parse(Console.ReadLine());
-string result = "";
-while (num >= 1)
-{
-    if (num % 2 == 0)
-    {
-        result = "0";
-    }
-    else if (num % 2 != 0)
-    {
-        result = "1";
-    }
-    Console.Write(result);
-    num = num / 2;
-}
 
+Console.WriteLine(BinarNumber(num));
+
+string BinarNumber(int num)
+{ 
+    string number = "";
+    //Так как задача решается через деление,
+    //то цикл идет до нуля и останавливается
+    while(num != 0)
+    {   //Делим 45 % 2 и остаток плюсуем к пустой строчке,
+    //тем самым с каждым циклом будет приписываться или 0 или 1
+        number = num % 2 + number;
+        //Делим 45 на 2, чтобы следующий цикл начался с 22(45 / 2 = 22)
+        num = num / 2;
+    }
+    return number;
+}

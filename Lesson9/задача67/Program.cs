@@ -15,9 +15,9 @@ int NumSum(int num)
     {
         int sum = num % 10;
         num = num / 10;
-        return NumSum(num) + sum;
+        return NumSum(num) + sum;// 0 + 3; 3 + 5 и тд
     }
 
-    return 0;
+    return 0;// Возвращаем 0, чтобы сумма складывалась правильно
 
 }

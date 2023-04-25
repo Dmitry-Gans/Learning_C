@@ -75,4 +75,3 @@ Dictionary<int, int> SummIndexTimes(int[,] array)
     }
     return dic;
 }
-

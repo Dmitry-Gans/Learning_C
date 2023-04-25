@@ -22,10 +22,8 @@
 
 Console.WriteLine("Введите число N");
 int num = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите число i");
-int i = int.Parse(Console.ReadLine());
-Array(num, i);
-void Array(int num, int i)
+Array(num);
+void Array(int num, int i = 1)// Задаем 1, чтобы она шла по умолчанию
 {
     if (i <= num)
     {
